@@ -8,12 +8,36 @@ body {
   background: #009447;
   color: #fff;
   font-weight: 300;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.HeadingContainer {
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.HeadingContainer.DisplayNone {
+  display: none;
 }
 
 h1 {
   text-align: center;
   line-height: 140%;
   margin: 8% 60 5% 0;
+}
+
+.Title {
+  font-size: 3em;
+}
+
+.Title.DisplayNone {
+  display: none;
 }
 
 #theDuck {
@@ -32,26 +56,31 @@ h1 {
 
 #theDuck:hover {
   background-color: #ffffff;
-  text-align: center;
   color: #009447;
-  position:relative;
   top:-1px;
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
 }
 
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 20px;
-  height: 300px;
-  corner-radius: 8px;
-  -moz-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  -moz-border-radius:25px;
-  -webkit-border-radius:25px;
-  border-radius:25px;
-  border:10px solid #fff;
+.SummaryContainer {
+  text-align: center;
+  transition: all 250ms;
+  max-height: 0px;
+  max-width: 0px;
+  opacity: 0;
+  overflow: hidden;
 }
 
+.SummaryContainer.Expand {
+  transition: opacity 500ms;
+  transition: max-height: 500ms;
+  max-height: 1000px;
+  max-width: 1000px;
+  opacity: 1;
+}
+
+.SummaryImage{
+  width: 500px;
+  height: auto;
+  margin: 20px 40px;
+  border-radius: 16px;
+}

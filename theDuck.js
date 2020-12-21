@@ -1,3 +1,4 @@
+
 let fbombTeamMates = [
   'Adam',
   'Leandro',
@@ -7,23 +8,6 @@ let fbombTeamMates = [
   'Rainer',
   'Rui',
   'Scott',
-  'Will',
-  'Paul',
-  'Tony',
-  'Josh',
-  'Alicia',
-  'Cam',
-  'Jay',
-  'Ed',
-  'Jess',
-  'Jessie',
-  'Shaun',
-  'Dan',
-  'Nathan',
-  'Glen',
-  'Angelina',
-  'Sam',
-  'James',
 ];
 
 const funFacts =
@@ -107,27 +91,65 @@ const randomlySelectValueThatHasNotPreviouslyBeenSelected = (items, selectedItem
   return newSelectedItem;
 }
 
-const tailorFunFactForUser = (funFact, user) => funFact.replace('pickedTeamMate', user);
-
-const getHeading = () => document.getElementById('Heading');
-
 const emptyArray = array => array.splice(0, array.length);
 
-const resetDuck = () => {
-  emptyArray(usedFacts);
-  emptyArray(selectedTeamMates);
-  const theDuckButton = document.getElementById('theDuck');
+const tailorFunFactForUser = (funFact, user) => funFact.replace('pickedTeamMate', user);
+
+const getTitle = () => document.querySelector('#Title');
+const getHeadingContainer = () => document.querySelector('.HeadingContainer');
+const getHeading = () => document.querySelector('#Heading');
+const getSummaryContainer = () => document.querySelector('.SummaryContainer');
+const getDuckButton = () => document.querySelector('#theDuck');
+
+const showIntialTitle = () => {
+  getTitle().classList.remove("DisplayNone");
+  updateHeading('');
+  getHeadingContainer().classList.remove("DisplayNone");
+  getSummaryContainer().classList.remove("Expand");
+}
+
+const showSummarySection = () => {
+  getSummaryContainer().classList.add('Expand');
+  getTitle().classList.add("DisplayNone");
+  getHeadingContainer().classList.add("DisplayNone");
+}
+
+const poentiallyHideTitle = () => {
+  getTitle().classList.add("DisplayNone");
+
+}
+
+const handleUpdateDuckButton = (text, onClick) => {
+  const theDuckButton = getDuckButton();
   if (theDuckButton) {
-    theDuckButton.value = "Use the 🐥";
-    theDuckButton.onclick = selectRandomUserWithComment;
+    theDuckButton.value = text;
+    theDuckButton.onclick = onClick;
   }
 }
 
+const setDuckButtonToDefaultFunctionality = () => handleUpdateDuckButton("Use the 🐥", selectRandomUserWithComment)
+
+const setDuckButtonToResetFunctionality = () => {
+  handleUpdateDuckButton("Reset", resetApp)
+}
+
+const resetApp = () => {
+  setDuckButtonToDefaultFunctionality();
+  emptyArray(usedFacts);
+  emptyArray(selectedTeamMates);
+  showIntialTitle();
+}
+
 const resetColors = () => {
-  const elem = getHeading();
-  const body = document.querySelector('body');
-  body.style.backgroundColor = '#009447';
-  elem.style.color = "white";
+  //const elem = getHeading();
+  //const body = document.querySelector('body');
+  //body.style.backgroundColor = '#009447';
+  //elem.style.color = "white";
+}
+
+const updateHeading = heading => {
+  const headingElem = getHeading();
+  headingElem.innerHTML = heading;
 }
 
 const selectRandomUserWithComment = () => {
@@ -139,25 +161,21 @@ const selectRandomUserWithComment = () => {
   const selectedFunFact = randomlySelectValueThatHasNotPreviouslyBeenSelected(funFacts, usedFacts);
   usedFacts.push(selectedFunFact);
 
-  const elem = getHeading();
   const body = document.querySelector('body');
 
   if (selectedTeamMates.length === fbombTeamMates.length) {
-    resetColors();
-    elem.innerHTML=`🎄 Have an f-bomb awesome holiday! 🎄 <img src="https://cdn.retailbiz.com.au/wp-content/uploads/2012/03/31112845/120229_Butcherman-28143-Custom-Name.jpg">`;
-    const theDuckButton = document.getElementById('theDuck');
-    if (theDuckButton) {
-      theDuckButton.value = "Reset";
-      theDuckButton.onclick = resetDuck;
-    }
+    //resetColors();
+    setDuckButtonToResetFunctionality();
+    showSummarySection();
   } else {
-    if (selectedTeamMate === 'Kathleen') {
+    if ( false && selectedTeamMate === 'Kathleen') {
       elem.innerHTML = "KATHLEEN, WHY ARE YOU LEAVING US?! 😭"
       body.style.backgroundColor = "black";
       elem.style.color = "red";
     } else {
-      elem.innerHTML = tailorFunFactForUser(selectedFunFact, selectedTeamMate);
-      resetColors();
+      poentiallyHideTitle();
+      updateHeading(tailorFunFactForUser(selectedFunFact, selectedTeamMate));
+      //resetColors();
     }
   }
 };
