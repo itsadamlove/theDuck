@@ -95,9 +95,11 @@ const emptyArray = array => array.splice(0, array.length);
 
 const tailorFunFactForUser = (funFact, user) => funFact.replace('pickedTeamMate', user);
 
+const getBody = () => document.querySelector('body');
 const getTitle = () => document.querySelector('#Title');
 const getHeadingContainer = () => document.querySelector('.HeadingContainer');
 const getHeading = () => document.querySelector('#Heading');
+const getSummaryHeading = () => document.querySelector('#SummaryHeading');
 const getSummaryContainer = () => document.querySelector('.SummaryContainer');
 const getDuckButton = () => document.querySelector('#theDuck');
 
@@ -112,6 +114,8 @@ const showSummarySection = () => {
   getSummaryContainer().classList.add('Expand');
   getTitle().classList.add("DisplayNone");
   getHeadingContainer().classList.add("DisplayNone");
+  getBody().style.background = "rgb(216, 215, 216)";
+  getSummaryHeading().style.color = "#333333";
 }
 
 const poentiallyHideTitle = () => {
@@ -137,13 +141,6 @@ const resetApp = () => {
   location.reload();
 }
 
-const resetColors = () => {
-  //const elem = getHeading();
-  //const body = document.querySelector('body');
-  //body.style.backgroundColor = '#009447';
-  //elem.style.color = "white";
-}
-
 const updateHeading = heading => {
   const headingElem = getHeading();
   headingElem.innerHTML = heading;
@@ -161,11 +158,10 @@ const selectRandomUserWithComment = () => {
   const body = document.querySelector('body');
 
   if (selectedTeamMates.length === fbombTeamMates.length) {
-    //resetColors();
     setDuckButtonToResetFunctionality();
     showSummarySection();
   } else {
-    if ( false && selectedTeamMate === 'Kathleen') {
+    if (false && selectedTeamMate === 'Kathleen') {
       elem.innerHTML = "KATHLEEN, WHY ARE YOU LEAVING US?! 😭"
       body.style.backgroundColor = "black";
       elem.style.color = "red";
