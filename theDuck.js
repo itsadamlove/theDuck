@@ -134,10 +134,7 @@ const setDuckButtonToResetFunctionality = () => {
 }
 
 const resetApp = () => {
-  setDuckButtonToDefaultFunctionality();
-  emptyArray(usedFacts);
-  emptyArray(selectedTeamMates);
-  showIntialTitle();
+  location.reload();
 }
 
 const resetColors = () => {
