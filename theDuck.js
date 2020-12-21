@@ -2,7 +2,6 @@
 let fbombTeamMates = [
   'Adam',
   'Leandro',
-  'Kathleen',
   'Mattia',
   'Pablo',
   'Rainer',
@@ -114,8 +113,6 @@ const showSummarySection = () => {
   getSummaryContainer().classList.add('Expand');
   getTitle().classList.add("DisplayNone");
   getHeadingContainer().classList.add("DisplayNone");
-  getBody().style.background = "rgb(216, 215, 216)";
-  getSummaryHeading().style.color = "#333333";
 }
 
 const poentiallyHideTitle = () => {
@@ -161,14 +158,7 @@ const selectRandomUserWithComment = () => {
     setDuckButtonToResetFunctionality();
     showSummarySection();
   } else {
-    if (false && selectedTeamMate === 'Kathleen') {
-      elem.innerHTML = "KATHLEEN, WHY ARE YOU LEAVING US?! 😭"
-      body.style.backgroundColor = "black";
-      elem.style.color = "red";
-    } else {
-      poentiallyHideTitle();
-      updateHeading(tailorFunFactForUser(selectedFunFact, selectedTeamMate));
-      //resetColors();
-    }
+    poentiallyHideTitle();
+    updateHeading(tailorFunFactForUser(selectedFunFact, selectedTeamMate));
   }
 };
