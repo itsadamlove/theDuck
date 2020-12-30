@@ -155,7 +155,7 @@ const selectRandomUserWithComment = () => {
 
   const body = document.querySelector('body');
 
-  if (selectedTeamMates.length === fbombTeamMates.length) {
+  if (selectedTeamMates.length > fbombTeamMates.length) {
     setDuckButtonToResetFunctionality();
     showSummarySection();
   } else {
