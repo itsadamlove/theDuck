@@ -328,3 +328,15 @@ const selectRandomUserWithComment = () => {
     updateHeading(tailorFunFactForUser(selectedFunFact, selectedTeamMate));
   }
 };
+
+const potentiallySelectNextUser = (e) => {
+  if ([32, 13].includes(e.keyCode)) {
+    if (selectedTeamMates.length > fbombTeamMates.length) {
+      resetApp();
+    } else {
+      selectRandomUserWithComment();
+    }
+  }
+};
+
+document.addEventListener("keydown", potentiallySelectNextUser);
