@@ -1,7 +1,6 @@
 let fbombTeamMates = [
   "Adam",
   "Leandro",
-  "Mattia",
   "Pablo",
   "Rainer",
   "Rui",
