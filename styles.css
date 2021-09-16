@@ -13,9 +13,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 600ms;
+}
+
+.WhiteBackground {
+  background: white;
 }
 
 .DuckContainer {
+  z-index: 100;
   padding-left: 12px;
   padding-right: 12px;
   @media(min-width: 768px) {
@@ -32,6 +38,7 @@ body {
 }
 
 .HeadingContainer.DisplayNone {
+  transition: all 600ms;
   display: none;
 }
 
@@ -40,6 +47,16 @@ h1 {
   text-align: center;
   line-height: 140%;
   margin: 8% 60 5% 0;
+  transition: all 600ms;
+}
+
+h3 {
+  font-style: italic;
+  font-weight: 400;
+  padding-bottom: 20px;
+  transition: all 600ms;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 @media(min-width: 992px) {
@@ -59,6 +76,7 @@ h1 {
 }
 
 .Title.DisplayNone {
+  transition: all 600ms;
   display: none;
 }
 
@@ -90,6 +108,7 @@ h1 {
   max-width: 0px;
   opacity: 0;
   overflow: hidden;
+  transition: all 600ms;
 }
 
 .SummaryContainer.Expand {
@@ -98,6 +117,7 @@ h1 {
   max-height: 1000px;
   max-width: 1000px;
   opacity: 1;
+  transition: all 600ms;
 }
 
 .SummaryImage{
@@ -107,4 +127,46 @@ h1 {
   border-radius: 16px;
   max-width: 80vw;
   margin: auto;
+}
+
+.DarkText {
+  color: #485146;
+}
+
+@keyframes slideDown {
+  from {
+    top: -20vh;
+    transform: scale(200%);
+  }
+
+  to {
+    top: 110vh;
+    /* top: 90vh; */
+    opacity: 50%;
+    transform: scale(50%);
+  }
+}
+
+.RainingEmoji {
+  position: absolute;
+  left: 20vw;
+  top: -10vh;
+  animation-name: slideDown;
+  z-index: 10;
+}
+
+.Animation-a {
+  animation-duration: 10s;
+}
+.Animation-b {
+  animation-duration: 12s;
+}
+.Animation-c {
+  animation-duration: 8s;
+}
+.Animation-d {
+  animation-duration: 6s;
+}
+.Animation-e {
+  animation-duration: 14s;
 }

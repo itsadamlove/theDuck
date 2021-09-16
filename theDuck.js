@@ -262,18 +262,61 @@ const getHeading = () => document.querySelector("#Heading");
 const getSummaryHeading = () => document.querySelector("#SummaryHeading");
 const getSummaryContainer = () => document.querySelector(".SummaryContainer");
 const getDuckButton = () => document.querySelector("#theDuck");
+const getEmojiContainer = () => document.querySelector(".EmojiContainer");
 
 const showIntialTitle = () => {
   getTitle().classList.remove("DisplayNone");
   updateHeading("");
   getHeadingContainer().classList.remove("DisplayNone");
   getSummaryContainer().classList.remove("Expand");
+  // TODO: kill
+  getBody().classList.remove("WhiteBackground");
+};
+
+const getRandom = (list) => list[Math.floor(Math.random() * list.length)];
+
+const makeItRain = () => {
+  const emojies = ["💚", "😭", "🥨", "🥺", "💣"];
+  const animationClasses = [
+    "Animation-a",
+    "Animation-b",
+    "Animation-c",
+    "Animation-d",
+    "Animation-e",
+  ];
+
+  const randEmoji = getRandom(emojies);
+  const animationClass = getRandom(animationClasses);
+  const leftPos = `${Math.floor(Math.random() * 100 + 1)}vw`;
+  const emojiNode = document.createElement("H2");
+  emojiContent = document.createTextNode(randEmoji);
+  emojiNode.appendChild(emojiContent);
+  emojiNode.classList.add("RainingEmoji", animationClass);
+  emojiNode.style.left = leftPos;
+  getEmojiContainer().appendChild(emojiNode);
+
+  const timeout = Math.floor(Math.random() * 600 + 1);
+  setTimeout(() => {
+    makeItRain();
+  }, [timeout]);
+
+  const windowHeight = getBody().getBoundingClientRect().height;
+  document.querySelectorAll(".RainingEmoji").forEach((elem) => {
+    if (elem.getBoundingClientRect().top > windowHeight) {
+      elem.remove();
+    }
+  });
 };
 
 const showSummarySection = () => {
   getSummaryContainer().classList.add("Expand");
   getTitle().classList.add("DisplayNone");
   getHeadingContainer().classList.add("DisplayNone");
+  // TODO: kill
+  getBody().classList.add("WhiteBackground");
+  getSummaryContainer().classList.add("DarkText");
+
+  makeItRain();
 };
 
 const poentiallyHideTitle = () => {
