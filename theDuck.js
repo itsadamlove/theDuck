@@ -1,7 +1,6 @@
 let fbombTeamMates = [
   "Adam",
   "Leandro",
-  "Pablo",
   "Rainer",
   "Scott",
   "Swapneel",
@@ -269,8 +268,8 @@ const showIntialTitle = () => {
   updateHeading("");
   getHeadingContainer().classList.remove("DisplayNone");
   getSummaryContainer().classList.remove("Expand");
-  // TODO: kill
-  getBody().classList.remove("WhiteBackground");
+  // // TODO: kill
+  // getBody().classList.remove("WhiteBackground");
 };
 
 const getRandom = (list) => list[Math.floor(Math.random() * list.length)];
@@ -312,11 +311,11 @@ const showSummarySection = () => {
   getSummaryContainer().classList.add("Expand");
   getTitle().classList.add("DisplayNone");
   getHeadingContainer().classList.add("DisplayNone");
-  // TODO: kill
-  getBody().classList.add("WhiteBackground");
-  getSummaryContainer().classList.add("DarkText");
+  // // TODO: kill
+  // getBody().classList.add("WhiteBackground");
+  // getSummaryContainer().classList.add("DarkText");
 
-  makeItRain();
+  // makeItRain();
 };
 
 const poentiallyHideTitle = () => {
