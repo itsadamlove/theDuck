@@ -269,13 +269,15 @@ const showIntialTitle = () => {
   getHeadingContainer().classList.remove("DisplayNone");
   getSummaryContainer().classList.remove("Expand");
   // // TODO: kill
-  // getBody().classList.remove("WhiteBackground");
+  getBody().classList.remove("WhiteBackground");
 };
 
 const getRandom = (list) => list[Math.floor(Math.random() * list.length)];
 
 const makeItRain = () => {
-  const emojies = ["💚", "😭", "🥨", "🥺", "💣"];
+  // const emojies = ["💚", "😭", "🥨", "🥺", "💣"];
+  // const emojies = ["🎂”, “🎉”, “🍾” ];
+  const emojies = ["🎂", "🎉", "🍾"];
   const animationClasses = [
     "Animation-a",
     "Animation-b",
@@ -312,10 +314,10 @@ const showSummarySection = () => {
   getTitle().classList.add("DisplayNone");
   getHeadingContainer().classList.add("DisplayNone");
   // // TODO: kill
-  // getBody().classList.add("WhiteBackground");
-  // getSummaryContainer().classList.add("DarkText");
+  getBody().classList.add("WhiteBackground");
+  getSummaryContainer().classList.add("DarkText");
 
-  // makeItRain();
+  makeItRain();
 };
 
 const poentiallyHideTitle = () => {
