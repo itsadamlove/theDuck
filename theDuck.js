@@ -271,7 +271,7 @@ const showIntialTitle = () => {
   getHeadingContainer().classList.remove("DisplayNone");
   getSummaryContainer().classList.remove("Expand");
   // // TODO: kill
-  getBody().classList.remove("WhiteBackground");
+  // getBody().classList.remove("WhiteBackground");
 };
 
 const getRandom = (list) => list[Math.floor(Math.random() * list.length)];
@@ -317,9 +317,9 @@ const showSummarySection = () => {
   getTitle().classList.add("DisplayNone");
   getHeadingContainer().classList.add("DisplayNone");
   // // TODO: kill
-  getBody().classList.add("WhiteBackground");
-  getSummaryContainer().classList.add("DarkText");
-  makeItRain();
+  // getBody().classList.add("WhiteBackground");
+  // getSummaryContainer().classList.add("DarkText");
+  // makeItRain();
 };
 
 const poentiallyHideTitle = () => {
@@ -365,8 +365,6 @@ const selectRandomUserWithComment = () => {
   );
   usedFacts.push(selectedFunFact);
 
-  const body = document.querySelector("body");
-
   if (selectedTeamMates.length > fbombTeamMates.length) {
     setDuckButtonToResetFunctionality();
     showSummarySection();
@@ -386,4 +384,4 @@ const potentiallySelectNextUser = (e) => {
   }
 };
 
-document.addEventListener("keydown", potentiallySelectNextUser);
+document.addEventListener("keyup", potentiallySelectNextUser);
