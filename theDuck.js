@@ -1,6 +1,6 @@
 let fbombTeamMates = [
   "Adam",
-  // "Leandro",
+  "Leandro",
   "Rainer",
   "Grant",
   "Elinor",
@@ -10,6 +10,7 @@ let fbombTeamMates = [
   "Michael",
   "Tom",
   "Sam",
+  "Max",
 ];
 
 const devJokes = [
