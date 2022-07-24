@@ -10,7 +10,7 @@ let fbombTeamMates = [
   "Michael",
   "Tom",
   "Sam",
-  // "Max",
+  "Design Team",
 ];
 
 const devJokes = [
