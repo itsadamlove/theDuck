@@ -4,7 +4,6 @@ let fbombTeamMates = [
   "Grant",
   "Michael",
   "Tom",
-  "Sam",
   "Rui",
   "Renee",
 ];
