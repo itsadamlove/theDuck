@@ -1,4 +1,4 @@
-let fbombTeamMates = ['Adam', 'Leandro', 'Grant', 'Tom', 'Rui', 'Renee'];
+let fbombTeamMates = ['Adam', 'Leandro', 'Grant', 'Tom', 'Rui', 'Renee', 'Saman'];
 
 const devJokes = [
   '<p><strong>Q:</strong> Which body part does a programmer know best?</p><br><p><strong>A:</strong> ARM</p><br>You&apos;re up pickedTeamMate!',
