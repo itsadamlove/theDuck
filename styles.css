@@ -5,7 +5,8 @@ body {
   margin: 0 auto;
   max-width: 960px;
   line-height: 1.65em;
-  background: #009447;
+  /* background: #009447; */
+  background: #fba8cb;
   color: #fff;
   font-weight: 300;
   width: 100vw;
@@ -91,13 +92,14 @@ h3 {
   cursor: pointer;
   font-size: 18pt;
   padding: 0.6em 1em;
-  transition-duration: 0.4s;
+  transition: all 0.4s ease-in-out;
+  opacity: 1;
 }
 
 #theDuck:hover {
   background-color: #ffffff;
-  color: #009447;
-  top:-1px;
+  color: #fba8cb;
+  transform: translateY(-2px);
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -121,12 +123,37 @@ h3 {
 }
 
 .SummaryImage{
-  width: 500px;
-  height: auto;
-  margin: 20px 40px;
+  width: 800px;
+  height: 500px;
+  margin: 20px auto;
   border-radius: 16px;
-  max-width: 80vw;
-  margin: auto;
+  max-width: 90vw;
+  max-height: 60vh;
+  object-fit: cover;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  background: linear-gradient(135deg, #e0e0e0 0%, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%, #e0e0e0 100%);
+  background-size: 400% 400%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+.SummaryImage.loaded {
+  opacity: 1;
+  animation: none;
+  background: none;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .DarkText {
@@ -169,4 +196,63 @@ h3 {
 }
 .Animation-e {
   animation-duration: 14s;
+}
+
+.RevealButton {
+  background-color: transparent;
+  margin: 20px auto;
+  display: block;
+  text-align: center;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 16pt;
+  padding: 0.5em 1em;
+  transition: all 0.4s ease-in-out;
+  opacity: 1;
+}
+
+.RevealButton:hover {
+  background-color: #ffffff;
+  color: #fba8cb;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.ImageLoadingContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.LoadingText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 1.2em;
+  text-align: center;
+  z-index: 10;
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+  pointer-events: none;
+}
+
+.LoadingText.hidden {
+  opacity: 0;
+}
+
+.LocationAnswer {
+  color: #ffffff;
+  font-size: 1.8em;
+  margin: 20px;
+  text-align: center;
+  min-height: 40px;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.LocationAnswer.show {
+  opacity: 1;
 }

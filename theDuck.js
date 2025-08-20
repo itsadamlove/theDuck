@@ -1,15 +1,9 @@
 let fbombTeamMates = [
   "Adam",
-  "Leandro",
-  "Rainer",
-  "Grant",
-  "Elinor",
-  "Ruslan",
-  "Jason",
-  "Ann",
-  "Michael",
-  "Tom",
-  "Sam",
+  "Rui",
+  "Tahlia",
+  "Jo",
+  "Lex"
 ];
 
 const devJokes = [
@@ -167,6 +161,209 @@ const devJokes = [
   "<p><strong>Q</strong>: Why did the ALU refuse to add two subnibbles.</p><p><strong>A</strong>: Because it refuses to be seen doing a two-bit operation.</p><br>You&apos;re up pickedTeamMate!",
 ];
 
+const locationImages = [
+  { 
+    url: "https://images.pexels.com/photos/338515/pexels-photo-338515.jpeg?auto=compress&cs=tinysrgb&w=800",
+    location: "Eiffel Tower, Paris, France 🇫🇷"
+  },
+  { 
+    url: "https://images.pexels.com/photos/1486222/pexels-photo-1486222.jpeg?auto=compress&cs=tinysrgb&w=800",
+    location: "Dubai, United Arab Emirates 🇦🇪"
+  },
+  { 
+    url: "https://images.pexels.com/photos/726484/pexels-photo-726484.jpeg?auto=compress&cs=tinysrgb&w=800",
+    location: "Tower Bridge, London, England 🇬🇧"
+  },
+  { 
+    url: "https://images.pexels.com/photos/1797161/pexels-photo-1797161.jpeg?auto=compress&cs=tinysrgb&w=800",
+    location: "Colosseum, Rome, Italy 🇮🇹"
+  },
+  { 
+    url: "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=800",
+    location: "Swiss Alps, Switzerland 🇨🇭"
+  },
+  { 
+    url: "https://images.pexels.com/photos/2835436/pexels-photo-2835436.jpeg?auto=compress&cs=tinysrgb&w=800",
+    location: "Tokyo, Japan 🇯🇵"
+  },
+  { 
+    url: "https://images.pexels.com/photos/2031706/pexels-photo-2031706.jpeg?auto=compress&cs=tinysrgb&w=800",
+    location: "Amsterdam, Netherlands 🇳🇱"
+  },
+  { 
+    url: "https://images.pexels.com/photos/1285625/pexels-photo-1285625.jpeg?auto=compress&cs=tinysrgb&w=800",
+    location: "Santorini, Greece 🇬🇷"
+  },
+  { 
+    url: "https://images.pexels.com/photos/1583339/pexels-photo-1583339.jpeg?auto=compress&cs=tinysrgb&w=800",
+    location: "Taj Mahal, Agra, India 🇮🇳"
+  },
+  { 
+    url: "https://images.pexels.com/photos/2412603/pexels-photo-2412603.jpeg?auto=compress&cs=tinysrgb&w=800",
+    location: "Shanghai, China 🇨🇳"
+  },
+  { 
+    url: "https://images.pexels.com/photos/618079/pexels-photo-618079.jpeg?auto=compress&cs=tinysrgb&w=800",
+    location: "Dubai Marina, UAE 🇦🇪"
+  },
+  { 
+    url: "https://images.pexels.com/photos/995765/pexels-photo-995765.jpeg?auto=compress&cs=tinysrgb&w=800",
+    location: "Sydney Opera House, Australia 🇦🇺"
+  },
+  { 
+    url: "https://images.pexels.com/photos/290595/pexels-photo-290595.jpeg?auto=compress&cs=tinysrgb&w=800",
+    location: "Statue of Liberty, New York, USA 🇺🇸"
+  },
+  { 
+    url: "https://images.pexels.com/photos/1388030/pexels-photo-1388030.jpeg?auto=compress&cs=tinysrgb&w=800",
+    location: "Barcelona, Spain 🇪🇸"
+  },
+  { 
+    url: "https://images.pexels.com/photos/1680247/pexels-photo-1680247.jpeg?auto=compress&cs=tinysrgb&w=800",
+    location: "Sydney Harbour Bridge, Australia 🇦🇺"
+  },
+  { 
+    url: "https://images.pexels.com/photos/2412603/pexels-photo-2412603.jpeg?auto=compress&cs=tinysrgb&w=800",
+    location: "Great Wall of China 🇨🇳"
+  },
+  { 
+    url: "https://images.pexels.com/photos/2873486/pexels-photo-2873486.jpeg?auto=compress&cs=tinysrgb&w=800",
+    location: "Tokyo Tower, Japan 🇯🇵"
+  },
+  { 
+    url: "https://images.pexels.com/photos/1242348/pexels-photo-1242348.jpeg?auto=compress&cs=tinysrgb&w=800",
+    location: "Grand Canyon, Arizona, USA 🇺🇸"
+  },
+  { 
+    url: "https://images.pexels.com/photos/1701595/pexels-photo-1701595.jpeg?auto=compress&cs=tinysrgb&w=800",
+    location: "Venice, Italy 🇮🇹"
+  },
+  { 
+    url: "https://images.pexels.com/photos/248195/pexels-photo-248195.jpeg?auto=compress&cs=tinysrgb&w=800",
+    location: "Mount Fuji, Japan 🇯🇵"
+  },
+  { 
+    url: "https://images.pexels.com/photos/71241/pexels-photo-71241.jpeg?auto=compress&cs=tinysrgb&w=800",
+    location: "Pyramids of Giza, Egypt 🇪🇬"
+  },
+  { 
+    url: "https://images.pexels.com/photos/13814994/pexels-photo-13814994.jpeg?auto=compress&cs=tinysrgb&w=800",
+    location: "Petra, Jordan 🇯🇴"
+  },
+  { 
+    url: "https://images.pexels.com/photos/2356045/pexels-photo-2356045.jpeg?auto=compress&cs=tinysrgb&w=800",
+    location: "Machu Picchu, Peru 🇵🇪"
+  },
+  { 
+    url: "https://images.pexels.com/photos/208733/pexels-photo-208733.jpeg?auto=compress&cs=tinysrgb&w=800",
+    location: "Vatican City 🇻🇦"
+  },
+  { 
+    url: "https://images.pexels.com/photos/1006965/pexels-photo-1006965.jpeg?auto=compress&cs=tinysrgb&w=800",
+    location: "Golden Gate Bridge, San Francisco, USA 🇺🇸"
+  },
+  { 
+    url: "https://images.pexels.com/photos/672532/pexels-photo-672532.jpeg?auto=compress&cs=tinysrgb&w=800",
+    location: "London Eye, England 🇬🇧"
+  },
+  { 
+    url: "https://images.pexels.com/photos/2363/france-landmark-lights-night.jpg?auto=compress&cs=tinysrgb&w=800",
+    location: "Arc de Triomphe, Paris, France 🇫🇷"
+  },
+  { 
+    url: "https://images.unsplash.com/photo-1597659840241-37e2b9c2f55f?w=800",
+    location: "Singapore 🇸🇬"
+  },
+  { 
+    url: "https://images.unsplash.com/photo-1483683804023-6ccdb62f86ef?w=800",
+    location: "Bali, Indonesia 🇮🇩"
+  },
+  { 
+    url: "https://images.unsplash.com/photo-1595435742617-44e8e80c3ea7?w=800",
+    location: "Prague, Czech Republic 🇨🇿"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=800",
+    location: "Sacré-Cœur, Paris, France 🇫🇷"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1529963183134-61a90db47eaf?w=800",
+    location: "Northern Lights, Iceland 🇮🇸"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1505164294036-5fad98506d20?w=800",
+    location: "Christ the Redeemer, Rio de Janeiro, Brazil 🇧🇷"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=800",
+    location: "Neuschwanstein Castle, Germany 🇩🇪"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1564758866811-4780aa0a1787?w=800",
+    location: "Angkor Wat, Cambodia 🇰🇭"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1589308078059-be1415eab4c3?w=800",
+    location: "Burj Khalifa, Dubai, UAE 🇦🇪"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=800",
+    location: "Mount Fuji, Japan 🇯🇵"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1512100356356-de1b84283e18?w=800",
+    location: "Chichen Itza, Mexico 🇲🇽"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1523731407965-2430cd12f5e4?w=800",
+    location: "St. Basil's Cathedral, Moscow, Russia 🇷🇺"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=800",
+    location: "Brandenburg Gate, Berlin, Germany 🇩🇪"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1518599904199-0ca897819ddb?w=800",
+    location: "Sagrada Familia, Barcelona, Spain 🇪🇸"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1587974928442-77dc3e0dba72?w=800",
+    location: "Space Needle, Seattle, USA 🇺🇸"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1583422409516-2895a77efded?w=800",
+    location: "La Sagrada Familia Interior, Barcelona, Spain 🇪🇸"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800",
+    location: "Gateway of India, Mumbai, India 🇮🇳"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1602002418816-5c0aeef426aa?w=800",
+    location: "Forbidden City, Beijing, China 🇨🇳"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1598535348425-e76a7cc312b5?w=800",
+    location: "CN Tower, Toronto, Canada 🇨🇦"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1599833975787-5985532d9daa?w=800",
+    location: "Stonehenge, England 🇬🇧"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=800",
+    location: "Marina Bay Sands, Singapore 🇸🇬"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1518005020951-eccb494ad742?w=800",
+    location: "Hassan II Mosque, Casablanca, Morocco 🇲🇦"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1605723517503-3cadb5818a0c?w=800",
+    location: "Palace of Versailles, France 🇫🇷"
+  }
+];
+
 const christmasJokes = [
   "What does Santa suffer from if he gets stuck in a chimney?<br>Claustrophobia! <br><br> You're up pickedTeamMate!",
   "Why does Santa have three gardens?<br>So he can 'ho ho ho'! <br><br> You're up pickedTeamMate!",
@@ -237,6 +434,7 @@ const christmasJokes = [
 
 const selectedTeamMates = [];
 const usedFacts = [];
+let currentLocationData = null;
 
 const randomlySelectValueThatHasNotPreviouslyBeenSelected = (
   items,
@@ -316,6 +514,95 @@ const showSummarySection = () => {
   getSummaryContainer().classList.add("Expand");
   getTitle().classList.add("DisplayNone");
   getHeadingContainer().classList.add("DisplayNone");
+  
+  // Hide the reset button initially
+  const duckButton = getDuckButton();
+  if (duckButton) {
+    duckButton.style.display = "none";
+  }
+  
+  // Select and display a random location
+  currentLocationData = locationImages[Math.floor(Math.random() * locationImages.length)];
+  const locationImageElement = document.querySelector("#locationImage");
+  const loadingText = document.querySelector("#loadingText");
+  
+  if (locationImageElement && loadingText) {
+    // Reset image state - show loading skeleton
+    locationImageElement.classList.remove("loaded");
+    locationImageElement.style.opacity = "0";
+    loadingText.classList.remove("hidden");
+    
+    // Add loading event listener
+    locationImageElement.onload = () => {
+      setTimeout(() => {
+        locationImageElement.classList.add("loaded");
+        locationImageElement.style.opacity = "1";
+        loadingText.classList.add("hidden");
+      }, 300); // Small delay for smoother transition
+    };
+    
+    // Handle loading error with fallback
+    locationImageElement.onerror = () => {
+      loadingText.textContent = "Trying backup image... 🔄";
+      
+      // Try a different image from our collection
+      const fallbackIndex = Math.floor(Math.random() * locationImages.length);
+      const fallbackData = locationImages[fallbackIndex];
+      
+      if (fallbackData.url !== currentLocationData.url) {
+        currentLocationData = fallbackData;
+        locationImageElement.src = fallbackData.url;
+      } else {
+        // If same URL, show error message
+        loadingText.textContent = "Image unavailable 😅 Try refreshing!";
+        setTimeout(() => {
+          loadingText.classList.add("hidden");
+          locationImageElement.style.background = "#f0f0f0";
+          locationImageElement.classList.add("loaded");
+          locationImageElement.style.opacity = "1";
+        }, 2000);
+      }
+    };
+    
+    // Set image source (this triggers loading)
+    locationImageElement.src = currentLocationData.url;
+  }
+  
+  // Setup reveal button
+  const revealButton = document.querySelector("#revealLocation");
+  const locationAnswer = document.querySelector("#locationAnswer");
+  
+  const revealLocation = () => {
+    if (revealButton && locationAnswer && duckButton) {
+      locationAnswer.textContent = currentLocationData.location;
+      locationAnswer.classList.add("show");
+      
+      // Smooth transition for reveal button
+      revealButton.style.opacity = "0";
+      setTimeout(() => {
+        revealButton.style.display = "none";
+        // Show the reset button after revealing
+        duckButton.style.display = "block";
+        duckButton.style.opacity = "0";
+        setTimeout(() => {
+          duckButton.style.opacity = "1";
+        }, 100);
+        setDuckButtonToResetFunctionality();
+      }, 400);
+    }
+  };
+  
+  if (revealButton && locationAnswer) {
+    locationAnswer.textContent = "";
+    locationAnswer.classList.remove("show");
+    revealButton.style.display = "block";
+    revealButton.style.opacity = "1";
+    revealButton.onclick = revealLocation;
+  }
+  
+  // Store reveal function for spacebar access
+  window.revealLocationFunction = revealLocation;
+  
   // // TODO: kill
   // getBody().classList.add("WhiteBackground");
   // getSummaryContainer().classList.add("DarkText");
@@ -376,8 +663,19 @@ const selectRandomUserWithComment = () => {
 
 const potentiallySelectNextUser = (e) => {
   if ([32, 13].includes(e.keyCode)) {
+    // Check if we're in the summary section and need to reveal location
     if (selectedTeamMates.length > fbombTeamMates.length) {
-      resetApp();
+      const revealButton = document.querySelector("#revealLocation");
+      const locationAnswer = document.querySelector("#locationAnswer");
+      
+      // If reveal button is visible, trigger reveal
+      if (revealButton && revealButton.style.display !== "none") {
+        window.revealLocationFunction && window.revealLocationFunction();
+      } 
+      // If location is already revealed (answer has text), reset app
+      else if (locationAnswer && locationAnswer.textContent) {
+        resetApp();
+      }
     } else {
       selectRandomUserWithComment();
     }

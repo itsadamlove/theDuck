@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:images.unsplash.com)",
+      "WebFetch(domain:images.unsplash.com)",
+      "WebFetch(domain:images.unsplash.com)",
+      "WebFetch(domain:images.unsplash.com)",
+      "WebSearch",
+      "WebSearch",
+      "WebSearch",
+      "WebSearch",
+      "WebSearch"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

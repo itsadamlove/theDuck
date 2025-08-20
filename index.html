@@ -19,11 +19,19 @@
       <div class="SummaryContainer">
         <!-- <h1>Happy Birthday, Sam!</h1> -->
         <!-- <img class="SummaryImage" src="./sam.jpg" /> -->
-        <h1>💣 Have an F-bomb awesome day! 💣</h1>
-        <img
-          class="SummaryImage"
-          src="https://source.unsplash.com/random?wallpaper,city,nature"
-        />
+        <h1>💖 Have an awesome day! 💖</h1>
+        <h2>Where in the world is this? 🌍</h2>
+        <div class="ImageLoadingContainer">
+          <div id="loadingText" class="LoadingText">Loading amazing location... ✈️</div>
+          <img
+            class="SummaryImage"
+            id="locationImage"
+            src=""
+            alt="Mystery location"
+          />
+        </div>
+        <button id="revealLocation" class="RevealButton">Reveal Location 📍</button>
+        <h2 id="locationAnswer" class="LocationAnswer"></h2>
       </div>
       <input
         type="button"
