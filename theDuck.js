@@ -501,7 +501,6 @@ const makeItRain = () => {
 };
 
 const showSummarySection = () => {
-<<<<<<< HEAD
   getSummaryContainer().classList.add("Expand");
   getTitle().classList.add("DisplayNone");
   getHeadingContainer().classList.add("DisplayNone");
@@ -593,16 +592,6 @@ const showSummarySection = () => {
   
   // Store reveal function for spacebar access
   window.revealLocationFunction = revealLocation;
-  
-||||||| 1204e9b
-  getSummaryContainer().classList.add("Expand");
-  getTitle().classList.add("DisplayNone");
-  getHeadingContainer().classList.add("DisplayNone");
-=======
-  getSummaryContainer().classList.add('Expand');
-  getTitle().classList.add('DisplayNone');
-  getHeadingContainer().classList.add('DisplayNone');
->>>>>>> f4348c82541d35da794e409f5da94fb1982edcfc
   // // TODO: kill
   // getBody().classList.add("WhiteBackground");
   // getSummaryContainer().classList.add("DarkText");
